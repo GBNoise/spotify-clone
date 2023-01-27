@@ -1,0 +1,17 @@
+@import "../../utils";
+@import "../../colors";
+.home {
+  width: $homeWidth;
+  height: $homeHeight;
+  position: absolute;
+  left: $homeLeft;
+  top: 0;
+  @include flex-center;
+
+  .homeInner {
+    width: 95%;
+    height: 95%;
+    background: $bgHome;
+    @include border-sm;
+  }
+}

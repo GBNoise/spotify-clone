@@ -1,0 +1,32 @@
+@import "./colors";
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  font-family: JetBrains Mono;
+}
+
+:root {
+  --bgColor: #0e0e0e;
+  --tsGray: rgba(200, 200, 200, 0.1);
+  --textColor: #fff;
+  --accent: rgb(255, 4, 58);
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  background: $bgColor;
+  display: flex;
+  flex-direction: column-reverse;
+}

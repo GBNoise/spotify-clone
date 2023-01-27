@@ -1,0 +1,37 @@
+// player related vars
+$playerWidth: 100%;
+$playerHeight: 60px;
+$progressbarHeight: 3px;
+
+// sidebar related vars
+$sidebarHeight: calc(100vh - #{$playerHeight} - #{$progressbarHeight});
+$sidebarWidth: 250px;
+
+// home related vars
+$homeWidth: calc(100% - #{$sidebarWidth});
+$homeHeight: $sidebarHeight;
+$homeLeft: $sidebarWidth;
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin align-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin border-sm {
+  border-radius: 5px;
+}
+
+@mixin transition {
+  transition: all 100ms ease;
+}
+
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+}

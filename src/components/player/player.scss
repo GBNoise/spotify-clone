@@ -1,0 +1,77 @@
+@import "../../colors";
+@import "../../utils";
+$controllersWidth: 200px;
+$childrenHeight: 80%;
+
+.player {
+  width: $playerWidth;
+  background-color: $bgColor;
+  outline: 3px solid gray;
+  height: $playerHeight;
+  position: relative;
+  color: #fff;
+  user-select: none;
+  @include align-center;
+  padding: 20px;
+  .controllers {
+    width: $controllersWidth;
+    padding: 0 10px 0 10px;
+    height: $childrenHeight;
+    @include flex-center;
+    position: absolute;
+    gap: 10px;
+    @include border-sm;
+    background: $tsGray;
+  }
+
+  svg,
+  path {
+    cursor: pointer;
+    @include transition;
+    &:hover {
+      color: $tsGray;
+    }
+  }
+
+  .middle {
+    left: calc(50% - $controllersWidth / 2);
+  }
+
+  .left {
+    left: 3%;
+  }
+
+  .songInfo {
+    width: $controllersWidth;
+    background: $tsGray;
+    height: $childrenHeight;
+    position: absolute;
+    @include border-sm;
+    display: flex;
+    gap: 10px;
+
+    .albumImage {
+      width: 25%;
+      border: 1px solid white;
+      height: 100%;
+    }
+
+    .songMeta {
+      display: flex;
+      padding: 5px;
+      @include flex-col;
+    }
+  }
+
+  .playerOptions {
+    position: absolute;
+    right: 3%;
+    background: $tsGray;
+    height: $childrenHeight;
+    width: fit-content;
+    padding: 0 10px 0 10px;
+    @include border-sm;
+    @include flex-center;
+    gap: 5px;
+  }
+}
