@@ -15,24 +15,32 @@
   width: 100%;
   height: 60px;
   display: flex;
+  justify-content: space-between;
   padding: 5px 20px;
   gap: 20px;
   position: absolute;
   top: 0;
   // border: solid white;
-  & > span {
+  .appNavigationArrows {
     display: flex;
-    background: $tsGray;
+    gap: 20px;
+    & > span {
+      display: flex;
+      background: $tsGray;
+      @include transition;
+      height: 50px;
+      width: 50px;
+      cursor: pointer;
+      @include flex-center;
 
-    height: 50px;
-    width: 50px;
-    cursor: pointer;
-    @include flex-center;
-
-    &,
-    svg,
-    path {
-      border-radius: 50%;
+      &,
+      svg,
+      path {
+        border-radius: 50%;
+      }
+      &:hover {
+        background: $gray;
+      }
     }
   }
   .appNavigationChildren {
