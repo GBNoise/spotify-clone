@@ -1,24 +1,25 @@
 @import "../../utils";
 @import "../../colors";
+$padding: 50px;
 .playlistSongs {
   width: $homeWidth;
   justify-content: flex-start;
   flex-direction: column;
   .playlistHeader {
     width: 100%;
-    background: blue;
+    // background: blue;
     display: flex;
     gap: 40px;
     align-items: flex-end;
     border-bottom: 2px solid $tsGray;
     padding-bottom: 2rem;
-    padding: 50px;
+    padding: $padding;
     padding-top: 80px;
-    background: linear-gradient(
-      rgb(70, 56, 152),
-      rgb(53, 42, 116),
-      rgb(43, 34, 94)
-    );
+    // background: linear-gradient(
+    //   rgb(70, 56, 152),
+    //   rgb(53, 42, 116),
+    //   rgb(43, 34, 94)
+    // );
     .playlistIconContainer {
       height: 250px;
       width: 250px;
@@ -36,6 +37,27 @@
     .playlistSongsInfo {
       h1 {
         font-size: 5rem;
+      }
+    }
+  }
+
+  .playlistControllers {
+    width: 100%;
+    height: 60px;
+    padding: 0 $padding;
+    @include flex-start-center;
+
+    .playBtn {
+      width: 50px;
+      height: 50px;
+      background: $accent;
+      @include flex-center;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background 250ms ease, color 250ms ease;
+      &:hover {
+        background: $tsGray;
+        color: $gray;
       }
     }
   }
