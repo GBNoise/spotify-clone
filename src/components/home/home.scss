@@ -71,6 +71,10 @@
         height: 200px;
         overflow: auto;
         @include border-sm;
+        gap: 60px;
+        &::-webkit-scrollbar {
+          display: none;
+        }
         .listItem {
           min-width: 180px;
           min-height: 150px;
