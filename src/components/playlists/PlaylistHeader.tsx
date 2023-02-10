@@ -3,6 +3,7 @@ import React from "react";
 import { AppNavigation } from "../utils/AppNavigation";
 import { RouterElementContainer } from "../utils/RouterElementContainer";
 import { ContainerProps } from "../utils/utils";
+import { PlaylistControllers } from "./PlaylistControllers";
 import "./playlists.scss";
 
 interface PlaylistHeaderProps extends ContainerProps {
@@ -25,10 +26,12 @@ export const PlaylistContainer: React.FC<PlaylistHeaderProps> = ({
       <header className="playlistHeader">
         <div className="playlistIconContainer">{cover}</div>
         <span className="playlistSongsInfo">
+          PLAYLIST
           <h1>{playlistName}</h1>
           <p>{playlistInfo}</p>
         </span>
       </header>
+      <PlaylistControllers />
       {children}
     </RouterElementContainer>
   );
