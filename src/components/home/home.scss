@@ -69,9 +69,10 @@
         padding: 10px;
         margin-top: 10px;
         height: 200px;
+        overflow: auto;
         @include border-sm;
         .listItem {
-          width: 180px;
+          min-width: 180px;
           min-height: 150px;
           @include flex-col-center;
           @include border-sm;
