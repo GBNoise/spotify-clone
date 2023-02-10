@@ -14,16 +14,18 @@ export const AppNavigation: React.FC<AppNavigationProps> = ({
   className,
   ...props
 }) => {
-  const router = useNavigate();
+  const navigate = useNavigate();
 
   return (
     <nav className={`appNavigation ${className}`} {...props}>
-      <span>
-        <ArrowLeftIcon width={30} />
-      </span>
-      <span>
-        <ArrowRightIcon width={30} />
-      </span>
+      <div className="appNavigationArrows">
+        <span onClick={() => navigate(-1)}>
+          <ArrowLeftIcon width={30} />
+        </span>
+        <span onClick={() => navigate(1)}>
+          <ArrowRightIcon width={30} />
+        </span>
+      </div>
       <div className="appNavigationChildren">{children}</div>
       <div className="appNavigationUser">
         <div className="appNavigationUserImage"></div>
