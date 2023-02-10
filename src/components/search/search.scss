@@ -1,0 +1,37 @@
+@import "../../utils";
+@import "../../colors";
+
+.searchInputForm {
+  width: 80%;
+  height: 40px;
+  @include flex-center;
+  .searchInput {
+    width: 100%;
+    background: white;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background: $tsGray;
+    padding: 10px;
+    color: $textColor;
+    font-size: 1.2rem;
+    padding-left: 45px;
+  }
+  position: relative;
+
+  .searchBtn {
+    outline: none;
+    border: none;
+    width: 30px;
+    height: 30px;
+    @include flex-center;
+    position: absolute;
+
+    background: transparent;
+    left: 5px;
+
+    .searchIcon {
+      color: White;
+    }
+  }
+}

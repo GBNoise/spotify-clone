@@ -1,6 +1,6 @@
 // player related vars
 $playerWidth: 100%;
-$playerHeight: 60px;
+$playerHeight: 70px;
 $progressbarHeight: 3px;
 
 // sidebar related vars
@@ -12,10 +12,28 @@ $homeWidth: calc(100% - #{$sidebarWidth});
 $homeHeight: $sidebarHeight;
 $homeLeft: $sidebarWidth;
 
+@mixin blue-gradient {
+  background: linear-gradient(
+    rgb(70, 56, 152),
+    rgb(53, 42, 116),
+    rgb(43, 34, 94)
+  );
+}
+
 @mixin flex-center {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@mixin flex-start {
+  display: flex;
+  justify-content: flex-start;
+}
+
+@mixin flex-start-center {
+  @include flex-start;
+  align-items: center;
 }
 
 @mixin align-center {
@@ -34,4 +52,9 @@ $homeLeft: $sidebarWidth;
 @mixin flex-col {
   display: flex;
   flex-direction: column;
+}
+
+@mixin flex-col-center {
+  @include flex-center;
+  @include flex-col;
 }

@@ -1,4 +1,5 @@
 @import "./colors";
+@import "./utils";
 
 *,
 *::after,
@@ -9,11 +10,20 @@
 }
 
 *::-webkit-scrollbar {
+  // display: none;
+  background: $tsGray;
+  // color: $gray;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: $gray !important;
+}
+
+*:not(div, ul)::-webkit-scrollbar {
   display: none;
 }
 
 body {
-  font-family: JetBrains Mono;
+  font-family: "JetBrainsMono Nerd Font";
 }
 
 :root {
@@ -21,6 +31,9 @@ body {
   --tsGray: rgba(200, 200, 200, 0.1);
   --textColor: #fff;
   --accent: rgb(255, 4, 58);
+  --tsWhite: rgba(255, 255, 255, 0.3);
+  --gray: rgb(100, 100, 100);
+  --blackShadow: rgb(20, 20, 0);
 }
 
 .main {
@@ -29,4 +42,13 @@ body {
   background: $bgColor;
   display: flex;
   flex-direction: column-reverse;
+  user-select: none;
+}
+
+a {
+  text-decoration: none;
+  color: $textColor;
+  &:hover {
+    text-decoration: underline;
+  }
 }

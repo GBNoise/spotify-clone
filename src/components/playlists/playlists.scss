@@ -1,0 +1,42 @@
+@import "../../utils";
+@import "../../colors";
+.playlistSongs {
+  width: $homeWidth;
+  justify-content: flex-start;
+  flex-direction: column;
+  .playlistHeader {
+    width: 100%;
+    background: blue;
+    display: flex;
+    gap: 40px;
+    align-items: flex-end;
+    border-bottom: 2px solid $tsGray;
+    padding-bottom: 2rem;
+    padding: 50px;
+    padding-top: 80px;
+    background: linear-gradient(
+      rgb(70, 56, 152),
+      rgb(53, 42, 116),
+      rgb(43, 34, 94)
+    );
+    .playlistIconContainer {
+      height: 250px;
+      width: 250px;
+      @include flex-center;
+      background: linear-gradient(
+        -45deg,
+        rgb(73, 38, 179),
+        rgb(88, 45, 216),
+        rgb(101, 55, 238),
+        rgb(106, 56, 255)
+      );
+      box-shadow: 0 0px 200px 20px $blackShadow;
+    }
+
+    .playlistSongsInfo {
+      h1 {
+        font-size: 5rem;
+      }
+    }
+  }
+}

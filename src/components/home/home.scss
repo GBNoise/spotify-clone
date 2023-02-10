@@ -7,11 +7,100 @@
   left: $homeLeft;
   top: 0;
   @include flex-center;
+  color: $textColor;
 
   .homeInner {
     width: 95%;
     height: 95%;
     background: $bgHome;
+    padding: 20px;
     @include border-sm;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    @include flex-col;
+    overflow: auto;
+    gap: 40px;
+
+    .greeting {
+      font-size: 2rem;
+    }
+
+    .recents {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-top: 20px;
+      gap: 20px;
+      place-items: center;
+      .recent {
+        background: $tsGray;
+        @include flex-start-center;
+        gap: 10px;
+        height: 80px;
+        width: 90%;
+        @include border-sm;
+        transition: background 400ms ease;
+        overflow: hidden;
+        cursor: pointer;
+        .recentCover {
+          object-fit: contain;
+          height: 100%;
+        }
+
+        &:hover {
+          background: $tsWhite;
+          outline: 2px solid $accent;
+        }
+      }
+    }
+
+    .lists {
+      @include flex-col;
+      .listInfo {
+        position: relative;
+        a {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+        }
+      }
+      .listItemsContainer {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        margin-top: 10px;
+        height: 200px;
+        @include border-sm;
+        .listItem {
+          width: 180px;
+          min-height: 150px;
+          @include flex-col-center;
+          @include border-sm;
+          background: $tsGray;
+          cursor: pointer;
+          &:hover {
+            background: $tsWhite;
+          }
+          .listItemCover {
+            object-fit: contain;
+            height: 100px;
+            width: 100px;
+            border: 1px solid white;
+          }
+          .listItemInfo {
+            @include flex-col;
+            gap: 5px;
+            width: 100%;
+            padding: 5px 10px;
+            overflow: hidden;
+            .description {
+              display: flex;
+              width: 100%;
+              white-space: nowrap;
+              overflow: scroll;
+            }
+          }
+        }
+      }
+    }
   }
 }

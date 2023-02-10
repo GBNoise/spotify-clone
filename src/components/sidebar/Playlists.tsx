@@ -6,10 +6,22 @@ interface PlaylitsProps {
 
 export const Playlists: React.FC<PlaylitsProps> = ({ className }) => {
   const playlists = [
-    { name: "name 1", cover: "imgURL" },
-    { name: "name 2", cover: "imgURL" },
-    { name: "name 3", cover: "imgURL" },
-    { name: "name 4", cover: "imgURL" },
+    {
+      name: "name 1",
+      cover: "https://i.scdn.co/image/ab67616d0000b27317f77fab7e8f18d5f9fee4a1",
+    },
+    {
+      name: "name 2",
+      cover: "https://i.scdn.co/image/ab67616d0000b27317f77fab7e8f18d5f9fee4a1",
+    },
+    {
+      name: "name 3",
+      cover: "https://i.scdn.co/image/ab67616d0000b27317f77fab7e8f18d5f9fee4a1",
+    },
+    {
+      name: "name 4",
+      cover: "https://i.scdn.co/image/ab67616d0000b27317f77fab7e8f18d5f9fee4a1",
+    },
   ];
 
   return (

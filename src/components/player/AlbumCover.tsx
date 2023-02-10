@@ -14,7 +14,10 @@ export const AlbumCover: React.FC<AlbumCoverProps> = ({
 }) => {
   return (
     <div className={`${className} ${position} }`} {...props}>
-      <div className="albumImage"></div>
+      <img
+        src="https://i.scdn.co/image/ab67616d0000b27317f77fab7e8f18d5f9fee4a1"
+        className="albumImage"
+      />
       <span className="songMeta">
         <h4>Name</h4>
         <p>album name</p>

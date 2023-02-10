@@ -18,12 +18,12 @@ export const Player = () => {
   }
   return (
     <div className="player">
-      <button
+      {/* <button
         style={{ zIndex: "20", position: "absolute", right: 0, top: "-30%" }}
         onClick={changePosition}
       >
         ChangePos
-      </button>
+      </button> */}
       <Controllers className="controllers" position={position} />
       <AlbumCover
         className="songInfo"
