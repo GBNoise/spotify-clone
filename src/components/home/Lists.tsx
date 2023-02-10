@@ -16,15 +16,35 @@ interface ListProps extends ContainerProps {
 
 export const List: React.FC<ListProps> = ({
   className,
-  props,
   title,
   description,
   items,
+  ...props
 }) => {
   const listItems: Item[] =
     items.length > 0
       ? items
       : ([
+          {
+            name: "This is Laufey",
+            img: "https://assets.vogue.com/photos/609bb445758287e5e091eeed/1:1/w_2000,h_2000,c_limit/Billie-Eilish-Happier-Than-Ever.jpeg",
+            description: "this is the collection of the best recors of laufey",
+          },
+          {
+            name: "This is Laufey",
+            img: "https://assets.vogue.com/photos/609bb445758287e5e091eeed/1:1/w_2000,h_2000,c_limit/Billie-Eilish-Happier-Than-Ever.jpeg",
+            description: "this is the collection of the best recors of laufey",
+          },
+          {
+            name: "This is Laufey",
+            img: "https://assets.vogue.com/photos/609bb445758287e5e091eeed/1:1/w_2000,h_2000,c_limit/Billie-Eilish-Happier-Than-Ever.jpeg",
+            description: "this is the collection of the best recors of laufey",
+          },
+          {
+            name: "This is Laufey",
+            img: "https://assets.vogue.com/photos/609bb445758287e5e091eeed/1:1/w_2000,h_2000,c_limit/Billie-Eilish-Happier-Than-Ever.jpeg",
+            description: "this is the collection of the best recors of laufey",
+          },
           {
             name: "This is Laufey",
             img: "https://assets.vogue.com/photos/609bb445758287e5e091eeed/1:1/w_2000,h_2000,c_limit/Billie-Eilish-Happier-Than-Ever.jpeg",
