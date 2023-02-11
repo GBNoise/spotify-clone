@@ -64,7 +64,9 @@ export const Options: React.FC<OptionProps> = ({ className }) => {
           <Link to={to}>
             <li
               onClick={() => handleClick(option)}
-              style={option === selected ? { color: "var(--accent)" } : {}}
+              style={
+                option === selected ? { background: "var(--darkAccent)" } : {}
+              }
             >
               {icon}
               <p>{option}</p>

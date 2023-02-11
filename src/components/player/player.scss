@@ -5,7 +5,7 @@ $childrenHeight: 80%;
 
 .player {
   width: $playerWidth;
-  background-color: $bgColor;
+  @include tsColor(#000, 0.95);
   outline: 3px solid gray;
   height: $playerHeight;
   position: relative;

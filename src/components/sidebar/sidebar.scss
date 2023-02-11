@@ -8,7 +8,8 @@
   left: 0;
   top: 0;
   color: $textColor;
-  border-right: 2px solid $tsGray;
+  background-color: $accent;
+  // border-right: 2px solid $tsGray;
   .sidebarOptions {
     width: 100%;
     height: 50%;
