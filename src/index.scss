@@ -27,13 +27,18 @@ body {
 }
 
 :root {
-  --bgColor: #0e0e0e;
   --tsGray: rgba(200, 200, 200, 0.1);
+  --bgColor: #0e0e0e;
   --textColor: #fff;
-  --accent: rgb(255, 4, 58);
+  --accentTextColor: rgb(254, 77, 77);
+  --accent: rgb(254, 77, 77);
+  --tsAccent: rgb(255, 77, 77, 0.4);
+  --darkAccent: rgb(200, 77, 77);
   --tsWhite: rgba(255, 255, 255, 0.3);
   --gray: rgb(100, 100, 100);
   --blackShadow: rgb(20, 20, 0);
+  --tsBlack: rgba(0, 0, 0, 0.8);
+  --black: rgb(0, 0, 0);
 }
 
 .main {
@@ -43,6 +48,7 @@ body {
   display: flex;
   flex-direction: column-reverse;
   user-select: none;
+  background: $accent;
 }
 
 a {
@@ -51,4 +57,26 @@ a {
   &:hover {
     text-decoration: underline;
   }
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  background: $darkAccent;
+  height: 5px;
+  border-radius: 5px;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  background-color: $accent;
+  border-radius: 50%;
+  box-shadow: 0px 0px 3px black;
+  margin: -2.5px;
 }

@@ -49,6 +49,11 @@ $homeLeft: $sidebarWidth;
   transition: all 100ms ease;
 }
 
+@mixin tsColor($color, $opacity) {
+  $bg: rgba($color, $opacity);
+  background-color: $bg;
+}
+
 @mixin flex-col {
   display: flex;
   flex-direction: column;
