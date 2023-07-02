@@ -7,6 +7,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "JetBrainsMono Nerd Font";
 }
 
 *::-webkit-scrollbar {
@@ -22,18 +23,16 @@
   display: none;
 }
 
-body {
-  font-family: "JetBrainsMono Nerd Font";
-}
-
 :root {
   --tsGray: rgba(200, 200, 200, 0.1);
   --bgColor: #0e0e0e;
   --textColor: #fff;
-  --accentTextColor: rgb(254, 77, 77);
-  --accent: rgb(254, 77, 77);
+  // --accentTextColor: rgb(254, 77, 77);
+  --accentTextColor: rgb(254, 44, 85);
+  // --accent: rgb(254, 44, 44);
+  --accent: #0e0e0e;
   --tsAccent: rgb(255, 77, 77, 0.4);
-  --darkAccent: rgb(200, 77, 77);
+  --darkAccent: rgb(165, 44, 44);
   --tsWhite: rgba(255, 255, 255, 0.3);
   --gray: rgb(100, 100, 100);
   --blackShadow: rgb(20, 20, 0);
@@ -57,6 +56,18 @@ a {
   &:hover {
     text-decoration: underline;
   }
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  color: $textColor;
+  @include border-sm;
 }
 
 input[type="range"] {

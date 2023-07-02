@@ -54,7 +54,7 @@
   }
 
   li:hover {
-    color: $accent;
+    // color: $accent;
     @include transition;
   }
 }
